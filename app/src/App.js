@@ -1,8 +1,12 @@
 import React from 'react';
+import SimpleMenu from './component/MenuDrop'
 
 function App() {
   return (
-    <h1>TESTE</h1>
+    <div>
+      <SimpleMenu />
+    </div>
+    
   );
 }
 
