@@ -6,20 +6,27 @@
 ```bash
 .
 ├── README.md
-├── requirements.txt
+├── Pipfile
+├── Pipfile.lock
+├── Procfile
 ├── server.py
 ├── settings.py
+├── testPostman
+    ├── test_postman.py
 ├── routes
-│   ├── somar.py
-│   └── teste.py
-    └── inpe.py
-    └── inmet.py
-    └── inpe_TQ0666.py
-    └── wrf_ams05km.py
-├── schema
-│   └── weather.py
+│   ├── 
+│   └── 
+    └── 
+    └── 
+    └── 
+    └── 
+├── database
+    ├── add_vendor_database.py
+│   └── add_product_database.py
+    └── ConexaoSQL_v2.py
+    └── conexaoSQL.db
 └── controllers
-    └── Somar.py
+    └── 
 ```
 
 
