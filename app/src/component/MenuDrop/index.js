@@ -29,42 +29,48 @@ export default function SimpleMenu() {
 
   const menudropdown = [
     {
-        id_: 1, 
-        name:"Product", 
-        add:"Add New Product",
-        search:"Seach Product", 
-        delet:"Delete product"
+      id: 1, 
+      name:"View", 
+      add:"Open table",
+      search:"View table", 
+      delet:"Extract Table"
     },
     {
-        id_: 2,
+      id: 2, 
+      name:"Product", 
+      add:"Add New Product",
+      search:"Seach Product", 
+      delet:"Delete product"
+    },
+    {
+        id: 3,
         name:"Vendor", 
-        add:"Add New Product",
-        search:"Seach Product", 
-        delet:"Delete product"
+        add:"Add New Vendor",
+        search:"Seach Vendor", 
+        delet:"Delete Vendor"
     }
   ];
 
   return (
     <div>
         {menusimple.map((simple) => (
-            <ButtonSimple key={simple.id_} content={simple.name} />
+            <ButtonSimple key={simple.id} content={simple.name} />
         ))}
         {menudropdown.map((drop) => (
-        <>             
-        <Button key={drop.id_} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+        <>
+        <Button key={drop.id} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
             {drop.name}
-        </Button>
-        <Menu
-            key={drop.id_}
+        </Button>                
+        <Menu            
             id="simple-menu"
             anchorEl={anchorEl}
             keepMounted
             open={Boolean(anchorEl)}
             onClose={handleClose}
-        >
-            <MenuItem onClick={handleClose}>{drop.add}</MenuItem>
-            <MenuItem onClick={handleClose}>{drop.search}</MenuItem>
-            <MenuItem onClick={handleClose}>{drop.delet}</MenuItem>
+        >            
+            <MenuItem key={drop[1]} onClick={handleClose}>{drop.add}</MenuItem>   
+            <MenuItem key={drop[2]} onClick={handleClose}>{drop.search}</MenuItem>
+            <MenuItem key={drop[3]} onClick={handleClose}>{drop.delet}</MenuItem>           
         </Menu>
         </>
         ))} 
