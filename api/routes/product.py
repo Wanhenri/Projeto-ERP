@@ -1,19 +1,25 @@
-import requests
-from flask import request, Response
-import json
-from datetime import datetime, timedelta
+from database.ConexaoSQL_v2 import Product
+from database.ConexaoSQL_v2 import db
 from flask_restful import Resource
+from flask import request
 
+def Product_item_function(product,code,price):
+    product = Product(name=product, code=code, price=price)
+    db.session.add(product)
+    db.session.commit()
+    
 
-
-class Teste(Resource):
+class Product_item(Resource):
     def get(self):
-        data = requests.get(
-            "http://servicos.cptec.inpe.br/XML/estacao/SBGR/condicoesAtuais.xml")
-        return Response(data, mimetype="application/xml")
+        return {
+            'status': 200,
+            'response': "Funciona Product_item"
+        }
 
     def post(self):
-        return {
-            'status': 201,
-            'response': 'Created successfully'
-        }
+        json_data = request.get_json()
+        product_id = str(json_data['product'])
+        code_id = str(json_data['code'])
+        price_id = str(json_data['price'])
+        Product_item_reports = Product_item_function(product_id,code_id,price_id)
+        return Product_item_reports

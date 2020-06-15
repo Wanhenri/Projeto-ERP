@@ -1,7 +1,7 @@
 # API
 
 
-## Estrutura
+## Structure
 
 ```bash
 .
@@ -85,5 +85,36 @@ $ python server.py
 ## Controllers
 
 ## Routes
+
+### ``` GET /api/routes/product ```
+
+Returns a status warning 200
+
+### ``` POST /api/routes/product ```
+
+Parameters:
+```
+{
+ "product": "String or null",
+ "code": "int",
+ "price": "float"
+}
+```
+
+### ``` GET /api/routes/vendor ```
+
+Returns a status warning 200
+
+### ``` POST /api/routes/vendor ```
+
+Parameters:
+```
+{
+ "name": String",
+ "cnpj": "Int",
+ "city": "String"
+}
+```
+
 
 ## Schema

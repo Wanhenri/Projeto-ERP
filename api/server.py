@@ -4,8 +4,8 @@ from flask_cors import CORS
 
 
 # Import routes
-from database.add_product_database import Product_item
-from database.add_vendor_database import Vendor_item
+from routes.product import Product_item
+from routes.vendor import Vendor_item
 
 
 app = Flask(__name__)
