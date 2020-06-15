@@ -1,9 +1,10 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy 
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///conexaosql.db'
 db = SQLAlchemy(app)
+
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -11,7 +12,7 @@ class Product(db.Model):
     code = db.Column(db.String(20))
     price = db.Column(db.Float(precision='4,2'), nullable=True)
 
-    def __init__(self,name,code,price):
+    def __init__(self, name, code, price):
         self.name = name
         self.code = code
         self.price = price
@@ -22,14 +23,11 @@ class Vendor(db.Model):
     name = db.Column(db.String(20))
     cnpj = db.Column(db.String(20))
     city = db.Column(db.String(20))
-    
-    def __init__(self,name, cnpj, city):
+
+    def __init__(self, name, cnpj, city):
         self.name = name
         self.cnpj = cnpj
         self.city = city
 
-#class ID_CNPJ(db.Model):
-#    id = db.Column(db.Integer, primary_key=True)
-#    city = db.Column(db.String(20))
 
 db.create_all()

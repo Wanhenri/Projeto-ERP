@@ -3,11 +3,12 @@ from database.ConexaoSQL_v2 import db
 from flask_restful import Resource
 from flask import request
 
-def Product_item_function(product,code,price):
+
+def Product_function(product, code, price):
     product = Product(name=product, code=code, price=price)
     db.session.add(product)
     db.session.commit()
-    
+
 
 class Product_item(Resource):
     def get(self):
@@ -21,5 +22,5 @@ class Product_item(Resource):
         product_id = str(json_data['product'])
         code_id = str(json_data['code'])
         price_id = str(json_data['price'])
-        Product_item_reports = Product_item_function(product_id,code_id,price_id)
+        Product_item_reports = Product_function(product_id, code_id, price_id)
         return Product_item_reports
