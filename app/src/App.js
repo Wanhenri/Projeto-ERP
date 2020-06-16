@@ -6,6 +6,8 @@ import Reset from "./styles/generic/reset";
 import Base from "./styles/base";
 import Data from '../src/pages/Data'
 
+import Home from "../src/pages/Home"
+
 export const Wrapper = styled.section`
   margin: 0 auto;  
 
@@ -20,6 +22,7 @@ function App() {
       <Base />
       <SimpleMenu />
       <Data />
+      <Home />
       
     </div>
     
