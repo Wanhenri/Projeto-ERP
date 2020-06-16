@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
+import FormLeadProduct from '../../component/FormLeadProduct';
 
 
 
@@ -13,7 +14,7 @@ export const Wrapper = styled.section`
 function Product() {
   return (
     <Wrapper>
-        <div>TESTE PRODUCT</div>
+        <FormLeadProduct />
     </Wrapper>
   );
 }
