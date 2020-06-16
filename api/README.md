@@ -96,8 +96,27 @@ Parameters:
 ```
 {
  "product": "String or null",
- "code": "int",
- "price": "float"
+ "code": "Number",
+ "price": "Number"
+}
+```
+### ``` DELETE /api/routes/product ```
+
+Parameters:
+```
+{
+ "id": "Number"
+}
+```
+### ``` PUT /api/routes/product ```
+
+Parameters:
+```
+{
+ "id":"Number",
+ "name": "String",
+ "code": "Number",
+ "price": "Number"
 }
 ```
 
@@ -110,11 +129,28 @@ Returns a status warning 200
 Parameters:
 ```
 {
- "name": String",
- "cnpj": "Int",
+ "name": "String",
+ "cnpj": Number,
  "city": "String"
 }
 ```
+### ``` DELETE /api/routes/vendor ```
 
+Parameters:
+```
+{
+ "id": "12"
+}
+```
+### ``` PUT /api/routes/vendor ```
+Parameters:
+```
+{
+ "id":"Number",
+ "name": "String",
+ "cnpj": "Number",
+ "city": "String"
+}
+```
 
 ## Schema

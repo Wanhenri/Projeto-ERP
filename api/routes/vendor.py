@@ -17,6 +17,15 @@ def delete_user(id):
     return '', 204
 
 
+def update_user(id, name, cnpj, city):
+    print(id)
+    product = db.session.query(Vendor).filter_by(id=id).first()
+    product.name = name
+    product.cnpj = cnpj
+    product.city = city
+    db.session.commit()
+
+
 class Vendor_item(Resource):
     def get(self):
         return {
@@ -37,3 +46,11 @@ class Vendor_item(Resource):
         delete_id = str(json_data['id'])
         delete_user_reports = delete_user(delete_id)
         return delete_user_reports
+
+    def put(self):
+        json_data = request.get_json()
+        update_id = str(json_data['id'])
+        name_id = str(json_data['name'])
+        cnpj_id = str(json_data['cnpj'])
+        city_id = str(json_data['city'])
+        update_user_reports = update_user(update_id, name_id, cnpj_id, city_id)

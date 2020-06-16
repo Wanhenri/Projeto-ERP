@@ -14,8 +14,15 @@ def delete_user(id):
     product = db.session.query(Product).filter_by(id=id).first()
     db.session.delete(product)
     db.session.commit()
-    return '', 204
 
+
+def update_user(id, name, code, price):
+    print(id)
+    product = db.session.query(Product).filter_by(id=id).first()
+    product.name = name
+    product.code = code
+    product.price = price
+    db.session.commit()
 
 class Product_item(Resource):
     def get(self):
@@ -26,7 +33,7 @@ class Product_item(Resource):
 
     def post(self):
         json_data = request.get_json()
-        product_id = str(json_data['product'])
+        product_id = str(json_data['name'])
         code_id = str(json_data['code'])
         price_id = str(json_data['price'])
         Product_item_reports = Product_function(product_id, code_id, price_id)
@@ -37,3 +44,11 @@ class Product_item(Resource):
         delete_id = str(json_data['id'])
         delete_user_reports = delete_user(delete_id)
         return delete_user_reports
+
+    def put(self):
+        json_data = request.get_json()
+        update_id = str(json_data['id'])
+        name_id = str(json_data['name'])
+        code_id = str(json_data['code'])
+        price_id = str(json_data['price'])
+        update_user_reports = update_user(update_id, name_id, code_id, price_id )

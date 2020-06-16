@@ -3,8 +3,7 @@ import styled from "styled-components";
 import SimpleTable from '../../component/table'
 
 export const Wrapper = styled.section`
-  margin: 0 auto;  
-
+  margin: 0 auto;
   width: 80vw;
   padding-right: 30px
 `;
