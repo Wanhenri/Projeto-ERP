@@ -24,6 +24,10 @@ export default function SimpleMenu() {
     {
         id: 2,
         name:"Profile"
+    },
+    {
+        id: 3,
+        name:"Data"
     }
   ];
 
@@ -58,20 +62,20 @@ export default function SimpleMenu() {
         ))}
         {menudropdown.map((drop) => (
         <>
-        <Button key={drop.id} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-            {drop.name}
-        </Button>                
-        <Menu            
-            id="simple-menu"
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-        >            
-            <MenuItem key={drop[1]} onClick={handleClose}>{drop.add}</MenuItem>   
-            <MenuItem key={drop[2]} onClick={handleClose}>{drop.search}</MenuItem>
-            <MenuItem key={drop[3]} onClick={handleClose}>{drop.delet}</MenuItem>           
-        </Menu>
+          <Button key={drop.id} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+              {drop.name}
+          </Button>                
+          <Menu            
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+          >            
+              <MenuItem  onClick={handleClose}>{drop.add}</MenuItem>   
+              <MenuItem  onClick={handleClose}>{drop.search}</MenuItem>
+              <MenuItem  onClick={handleClose}>{drop.delet}</MenuItem>           
+          </Menu>
         </>
         ))} 
     </div>
