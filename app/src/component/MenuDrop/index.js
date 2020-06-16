@@ -19,17 +19,22 @@ export default function SimpleMenu() {
 
   const menusimple = [
     {
-        id: 1, 
+      id: 1, 
+      name: "Welcome",
+      path: "/"
+    },
+    {
+        id: 2, 
         name: "Home",
         path: "/home"
     },
     {
-        id: 2,
+        id: 3,
         name:"Profile",
         path: "/profile"
     },
     {
-        id: 3,
+        id: 4,
         name:"Data",
         path: "/data"
     }
