@@ -14,19 +14,16 @@
 ├── testPostman
     ├── test_postman.py
 ├── routes
-    ├── 
-    └── 
-    └── 
-    └── 
-    └── 
-    └── 
+    ├── product.py
+    └── vendor.py
 ├── database
+    ├── ConexaoSQL_v2.py
+    └── conexaoSQL.db
+├──  controllers
+└── tmp
     ├── add_vendor_database.py
     └── add_product_database.py
-    └── ConexaoSQL_v2.py
-    └── conexaoSQL.db
-└── controllers
-    └── 
+    └── cnpj.py
 ```
 
 
