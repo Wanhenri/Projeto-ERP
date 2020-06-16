@@ -53,4 +53,5 @@ class Vendor_item(Resource):
         name_id = str(json_data['name'])
         cnpj_id = str(json_data['cnpj'])
         city_id = str(json_data['city'])
-        update_user_reports = update_user(update_id, name_id, cnpj_id, city_id)
+        update_reports = update_user(update_id, name_id, cnpj_id, city_id)
+        return update_reports

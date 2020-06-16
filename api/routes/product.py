@@ -24,6 +24,7 @@ def update_user(id, name, code, price):
     product.price = price
     db.session.commit()
 
+
 class Product_item(Resource):
     def get(self):
         return {
@@ -36,8 +37,8 @@ class Product_item(Resource):
         product_id = str(json_data['name'])
         code_id = str(json_data['code'])
         price_id = str(json_data['price'])
-        Product_item_reports = Product_function(product_id, code_id, price_id)
-        return Product_item_reports
+        Product_reports = Product_function(product_id, code_id, price_id)
+        return Product_reports
 
     def delete(self):
         json_data = request.get_json()
@@ -51,4 +52,5 @@ class Product_item(Resource):
         name_id = str(json_data['name'])
         code_id = str(json_data['code'])
         price_id = str(json_data['price'])
-        update_user_reports = update_user(update_id, name_id, code_id, price_id )
+        update_reports = update_user(update_id, name_id, code_id, price_id)
+        return update_reports
