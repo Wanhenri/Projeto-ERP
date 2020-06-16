@@ -54,7 +54,7 @@ export default function SimpleMenu() {
             <ButtonSimple key={simple.id} content={simple.name} />
         ))}
           <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-              Product
+              Add
           </Button>                
           <Menu            
               id="simple-menu"
@@ -63,9 +63,8 @@ export default function SimpleMenu() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
           >            
-              <MenuItem  onClick={handleClose}>Add New Product</MenuItem>   
-              <MenuItem  onClick={handleClose}>Seach Product</MenuItem>
-              <MenuItem  onClick={handleClose}>Delete product</MenuItem>           
+              <MenuItem  onClick={handleClose}>Product</MenuItem>   
+              <MenuItem  onClick={handleClose}>Vendor</MenuItem>          
           </Menu>
     </div>
   );

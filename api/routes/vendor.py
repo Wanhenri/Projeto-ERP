@@ -10,6 +10,13 @@ def Vendor_function(name, cnpj, city):
     db.session.commit()
 
 
+def delete_user(id):
+    vendor = db.session.query(Vendor).filter_by(id=id).first()
+    db.session.delete(vendor)
+    db.session.commit()
+    return '', 204
+
+
 class Vendor_item(Resource):
     def get(self):
         return {
@@ -24,3 +31,9 @@ class Vendor_item(Resource):
         city_id = str(json_data['city'])
         Vendor_item_reports = Vendor_function(name_id, cnpj_id, city_id)
         return Vendor_item_reports
+
+    def delete(self):
+        json_data = request.get_json()
+        delete_id = str(json_data['id'])
+        delete_user_reports = delete_user(delete_id)
+        return delete_user_reports
