@@ -34,20 +34,13 @@ export default function SimpleMenu() {
   const menudropdown = [
     {
       id: 1, 
-      name:"View", 
-      add:"Open table",
-      search:"View table", 
-      delet:"Extract Table"
-    },
-    {
-      id: 2, 
       name:"Product", 
       add:"Add New Product",
       search:"Seach Product", 
       delet:"Delete product"
     },
     {
-        id: 3,
+        id: 2,
         name:"Vendor", 
         add:"Add New Vendor",
         search:"Seach Vendor", 
@@ -60,10 +53,8 @@ export default function SimpleMenu() {
         {menusimple.map((simple) => (
             <ButtonSimple key={simple.id} content={simple.name} />
         ))}
-        {menudropdown.map((drop) => (
-        <>
-          <Button key={drop.id} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-              {drop.name}
+          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+              Product
           </Button>                
           <Menu            
               id="simple-menu"
@@ -72,12 +63,10 @@ export default function SimpleMenu() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
           >            
-              <MenuItem  onClick={handleClose}>{drop.add}</MenuItem>   
-              <MenuItem  onClick={handleClose}>{drop.search}</MenuItem>
-              <MenuItem  onClick={handleClose}>{drop.delet}</MenuItem>           
+              <MenuItem  onClick={handleClose}>Add New Product</MenuItem>   
+              <MenuItem  onClick={handleClose}>Seach Product</MenuItem>
+              <MenuItem  onClick={handleClose}>Delete product</MenuItem>           
           </Menu>
-        </>
-        ))} 
     </div>
   );
 }
