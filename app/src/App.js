@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import SimpleMenu from './component/MenuDrop'
+
+import Routes from './routes';
 
 import Reset from "./styles/generic/reset";
 import Base from "./styles/base";
-import Data from '../src/pages/Data'
+import Colors from './styles/setting/colors';
 
-import Home from "../src/pages/Home"
 
 export const Wrapper = styled.section`
   margin: 0 auto;  
@@ -20,9 +20,8 @@ function App() {
     <div>
       <Reset />
       <Base />
-      <SimpleMenu />
-      <Data />
-      <Home />
+      <Colors />
+      <Routes />
       
     </div>
     
