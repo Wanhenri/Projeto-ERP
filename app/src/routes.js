@@ -6,15 +6,22 @@ import Data from "../src/pages/Data";
 import Profile from "../src/pages/Profile";
 import Product from "../src/pages/Product";
 import Vendor from "../src/pages/Vendor";
+import Welcome from "../src/pages/Welcome"
 
 
 export default function Router() {
     const routes = [
-      {
+        {
+          name: "Welcome",
+          exact: true,
+          component: Welcome,
+          path: "/"
+        },
+        {
         name: "Home",
         exact: true,
         component: Home,
-        path: "/"
+        path: "/home"
       },
       {
         name: "Data",

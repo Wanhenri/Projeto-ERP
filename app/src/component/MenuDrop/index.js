@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -19,15 +20,18 @@ export default function SimpleMenu() {
   const menusimple = [
     {
         id: 1, 
-        name: "Home"
+        name: "Home",
+        path: "/home"
     },
     {
         id: 2,
-        name:"Profile"
+        name:"Profile",
+        path: "/profile"
     },
     {
         id: 3,
-        name:"Data"
+        name:"Data",
+        path: "/data"
     }
   ];
 
@@ -51,7 +55,9 @@ export default function SimpleMenu() {
   return (
     <div>
         {menusimple.map((simple) => (
+          <Link to={simple.path}>
             <ButtonSimple key={simple.id} content={simple.name} />
+          </Link>
         ))}
           <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
               Add
@@ -63,8 +69,8 @@ export default function SimpleMenu() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
           >            
-              <MenuItem  onClick={handleClose}>Product</MenuItem>   
-              <MenuItem  onClick={handleClose}>Vendor</MenuItem>          
+            <Link to={"/product"}> <MenuItem  onClick={handleClose}>Product</MenuItem></Link>
+            <Link to={"/vendor"}> <MenuItem  onClick={handleClose}>Vendor</MenuItem></Link>
           </Menu>
     </div>
   );

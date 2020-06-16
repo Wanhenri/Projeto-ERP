@@ -10,10 +10,11 @@ const Base = createGlobalStyle`
     }
     h1{
         font-family: 'Fjalla One', sans-serif; /*font do titulo*/
-        color: #FFFF;
+        color: var(--color-base);
     }
     h2{
-        font-family: 'Khula', sans-serif; /*font do subtitle*/
+        font-family: 'Khula', sans-serif; /*font do subtitle*/        
+        color: var(--color-negative-light);
     }
     input {
         font-family:inherit;
