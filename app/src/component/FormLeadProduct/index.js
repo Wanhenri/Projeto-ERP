@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import InputData from "../../object/Inputdata";
 import Btn from "../../object/Btn";
 import {Card} from '../../object/Card'
+import { Strong } from "../../object/Strong";
 
 export const Wrapper = styled.section`
   margin-top: 85px;
@@ -34,6 +35,7 @@ const FormLeadProduct = props => {
 
   return (
     <Card style={{ maxWidth: 470, marginTop: 60 }}>
+      <Strong>PRODUCT</Strong>
       <Form>
           <Wrapper>
               <Container>
