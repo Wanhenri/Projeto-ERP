@@ -60,16 +60,6 @@ export const Wrapper = styled.section`
   margin-top:50px;
 `;
 
-const ContainerEffect = styled.section`
-  opacity: 3.5;
-  transition: filter 0.2s;
-
-  &:hover {
-    filter: brightness(75%);
-    transition: 0.1s ease-out;
-  }
-`;
-
 const logo = require("../../assent/wanderson.jpg");
 
 export const Photo = styled.section`

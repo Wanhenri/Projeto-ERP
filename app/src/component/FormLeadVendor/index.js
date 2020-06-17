@@ -21,7 +21,7 @@ export const ContainerInput = styled.section`
 
 export const Form = styled.form``;
 
-const FormLeadProduct = props => {
+const FormLeadVendor = props => {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -49,4 +49,4 @@ const FormLeadProduct = props => {
   );
 };
 
-export default FormLeadProduct;
+export default FormLeadVendor;

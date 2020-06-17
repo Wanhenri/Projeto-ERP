@@ -5,15 +5,15 @@ import styled from "styled-components";
 
 export const Wrapper = styled.section`
   margin: 0 auto;  
-
   width: 80vw;
-  padding-right: 30px
+  padding-right: 30px;
+  margin-top:50px;
 `;
 
 function Profile() {
   return (
     <Wrapper>
-        <div>TESTE PROFILE</div>
+        <div>Em construção......</div>
     </Wrapper>
   );
 }
