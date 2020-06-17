@@ -85,6 +85,10 @@ function Welcome() {
           <br></br>
           Avaliação diagnóstica da evolução do SMG (Versão 2.1.0)<br></br>
           Sapucci, L. F.; Bastarz, C. F.; Mattos, J. G. Z.; Hernández Baños, I.; Eichholz, C.; Santos, W. H.; Negri, R. G.; Frassoni, A.
+          <br></br>
+          <br></br>
+          SANTOS, Tiago Henrique dos; SANTOS, Wanderson Henrique dos. Anteprojeto de uma talha elétrica de 8 toneladas. 2013. <br></br>
+          Monografia (Graduação) - Universidade de Taubaté, Departamento de Engenharia Mecânica e Elétrica, Taubaté, 2013., Taubaté.
         </Text>
         
     </Wrapper>
