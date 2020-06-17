@@ -30,16 +30,16 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat) {
-  return { name, calories, fat };
+function createData(name, code, code2) {
+  return { name, code, code2 };
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0),
-  createData('Ice cream sandwich', 237, 6.0),
-  createData('Eclair', 262, 6.0),
-  createData('Cupcake', 305, 6.0),
-  createData('Gingerbread', 356, 16.0),
+  createData('teste_1', 159, 6.0),
+  createData('teste_2', 237, 6.0),
+  createData('teste_3', 262, 6.0),
+  createData('teste_4', 305, 6.0),
+  createData('teste_5', 356, 16.0),
 ];
 
 export default function SimpleTable(props) {
@@ -62,8 +62,8 @@ export default function SimpleTable(props) {
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="left">{row.calories}</TableCell>
-                  <TableCell align="left">{row.fat}</TableCell>
+                  <TableCell align="left">{row.code}</TableCell>
+                  <TableCell align="left">{row.code2}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

@@ -77,7 +77,6 @@ export const ContainerPhoto = styled.section`
 `;
 export default function Home() {
   return (
-    <>
     <Wrapper>
         <Title content={"Resumo Técnico"} />
         
@@ -104,44 +103,6 @@ export default function Home() {
           Utilizei Visual Studio Code, na sua versão 1.46.0 (May 2020), com as extensões GitLens para controle de commits, ESLint, Color Highlight,
           Github, Paster JSON as Code e Prettier.
         </Text>
-        
-    </Wrapper>
-    <BlogContainer>
-      <Card style={{ maxWidth: 470 }}>
-        <Strong>Aplicação da ferramenta Wgrib2 na manipulação de dados</Strong>
-        <InfoBlogWrapper>
-          <DateBlog>
-            <FaCalendarAlt size={26} style={{ paddingRight: "10px" }} />
-            Julho 21, 2020
-          </DateBlog>
-          <DateBlog>
-            <FaComments size={26} style={{ paddingRight: "10px" }} />
-            Comentários
-          </DateBlog>
-        </InfoBlogWrapper>
-        <Title content={"Wanderson Henrique dos Santos"} />
-        <Subtitle content={"teste"} />
-        <Text>
-          "Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum."
-        </Text>
-        <ReactionBlogWrapper>
-          <Icon>
-            <FaHeart size={26} color="red" />
-          </Icon>
-          <Icon>
-            <FaShareAlt size={26} color="blue" />
-          </Icon>
-        </ReactionBlogWrapper>
-      </Card>
-    </BlogContainer>
-    </>
+    </Wrapper>    
   );
 }
