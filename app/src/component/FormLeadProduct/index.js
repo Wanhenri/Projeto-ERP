@@ -31,13 +31,16 @@ const FormLeadProduct = props => {
             <Container>
                 <ContainerInput>
                     <InputData
+                      
                       placeholder="teste"
                     />
                     <InputData
+                      style={{marginTop: "3px"}}
                       placeholder="teste"
                     />
                 </ContainerInput>
                 <Btn
+                  style={{marginTop: "3px"}}
                 >
                   {loading ? "Buscando..." : "Buscar"}
                 </Btn>
