@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 import InputData from "../../object/Inputdata";
 import Btn from "../../object/Btn";
+import {Card} from '../../object/Card'
 
 export const Wrapper = styled.section`
   margin-top: 85px;
@@ -14,10 +15,16 @@ export const Container = styled.section`
 
 `;
 
-export const ContainerInput = styled.section`
+export const ContainerColumn = styled.section`
   display: flex;
   flex-direction: column;
 `;
+
+export const ContainerRow = styled.section`
+  display: flex;
+  flex-direction: row;
+`;
+
 
 export const Form = styled.form``;
 
@@ -26,27 +33,33 @@ const FormLeadProduct = props => {
   const [search, setSearch] = useState("");
 
   return (
-    <Form>
-        <Wrapper>
-            <Container>
-                <ContainerInput>
-                    <InputData
-                      
-                      placeholder="teste"
-                    />
-                    <InputData
-                      style={{marginTop: "3px"}}
-                      placeholder="teste"
-                    />
-                </ContainerInput>
-                <Btn
-                  style={{marginTop: "3px"}}
-                >
-                  {loading ? "Buscando..." : "Buscar"}
-                </Btn>
-            </Container>            
-        </Wrapper>
-    </Form>
+    <Card style={{ maxWidth: 470, marginTop: 60 }}>
+      <Form>
+          <Wrapper>
+              <Container>
+                  <ContainerColumn>
+                      <InputData  
+                        style={{marginLeft: 47}}                    
+                        placeholder="Name"
+                      />
+                      <InputData  
+                        style={{marginTop: 3, marginLeft: 47}}                    
+                        placeholder="Code"
+                      />
+                      <InputData
+                        style={{marginTop: 3, marginLeft: 47}}
+                        placeholder="Price"
+                      />
+                  </ContainerColumn>
+                  <Btn
+                    style={{marginTop: 3, marginLeft: 47}}
+                  >
+                    {loading ? "Adding..." : "Add"}
+                  </Btn>
+              </Container>            
+          </Wrapper>
+      </Form>
+    </Card>
   );
 };
 
