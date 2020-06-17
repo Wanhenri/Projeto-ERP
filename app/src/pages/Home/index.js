@@ -95,7 +95,7 @@ export default function Home() {
           Seguimos utilizando a biblioteca React na sua versão 16.13.1.
           <br></br>
           <br></br>
-          Para o projeto foi escrito uma documentação, e também para o App e Api foram apresentados documentos explicando um pouco sua funcionalida,
+          Para o projeto foi escrito uma documentação, e também para o App e Api foram apresentados documentos explicando um pouco sua funcionalidade,
           estrutura e bibliotecas. 
           <br></br>
           <br></br>
