@@ -16,7 +16,7 @@ export const Container = styled.section`
 
 export const ContainerInput = styled.section`
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
 `;
 
 export const Form = styled.form``;
@@ -35,8 +35,6 @@ const FormLeadProduct = props => {
                     />
                     <InputData
                       placeholder="teste"
-                      value={search}
-                      onChange={e => setSearch(e.target.value)}
                     />
                 </ContainerInput>
                 <Btn

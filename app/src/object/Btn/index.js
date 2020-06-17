@@ -8,7 +8,7 @@ const Btndata = styled.button.attrs({
   width: 140px;
   height: 38px;
   margin: auto 0px;
-  margin-left: 10px;
+  
   border-radius: var(--radius-small);
   color: var(--color-zero);
   font-weight: bold;
@@ -19,5 +19,7 @@ const Btndata = styled.button.attrs({
     width 600ms cubic-bezier(0.94, -0.64, 0, 1);
   box-shadow: 0px 0px 0px var(--color-base);
 `;
+
+//margin-left: 10px;
 
 export default Btndata;
