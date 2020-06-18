@@ -2,11 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import SimpleTable from '../../component/table'
 
-export const Wrapper = styled.section`
-  margin: 0 auto;
-  width: 80vw;
-  padding-right: 30px
-`;
+import { Wrapper } from "./styles";
 
 export default function Data() {
   return (    
