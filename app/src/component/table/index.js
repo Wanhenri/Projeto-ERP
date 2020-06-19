@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -8,6 +9,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import styled from "styled-components";
+
+import Button from '../../object/Btn'
 
 export const Wrapper = styled.section`
   margin-top: 85px;
@@ -42,11 +45,26 @@ const rows = [
   createData('teste_5', 356, 16.0),
 ];
 
+const info = [
+  {
+    id: 1, 
+    name: "Add Product",
+    path: "/product"
+  },  {
+    id: 2, 
+    name: "Add Vendor",
+    path: "/vendor"
+  }
+]
+
 export default function SimpleTable(props) {
   const classes = useStyles();
 
   return (
     <Wrapper>
+        <Link to={props.path}>
+          <Button style={{marginBottom:20 }}>{props.button}</Button>
+        </Link>
         <TableContainer component={Paper}>
           <Table className={classes.table} size="small" aria-label="a dense table">
             <TableHead>

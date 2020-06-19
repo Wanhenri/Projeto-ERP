@@ -50,7 +50,7 @@ const FormLeadVendor = props => {
                   <Btn
                     style={{marginTop: 3, marginLeft: 47}}
                   >
-                    {loading ? "Adding..." : "Add"}
+                    {loading ? "Adding..." : "Add Vendor"}
                   </Btn>
               </Container>            
           </Wrapper>

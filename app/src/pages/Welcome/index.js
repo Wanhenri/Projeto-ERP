@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Title from '../../object/Title';
 import { Text } from '../../object/Text';
 
+import { DiGithubBadge } from "react-icons/di";
+import { FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
 
 
 export const Wrapper = styled.section`
@@ -37,6 +39,35 @@ export const ContainerPhoto = styled.section`
   display: flex;
   flex-flow: row wrap;
 `;
+
+const redesocial = [
+  {
+    id: 1,
+    name: "GitHub",
+    description: "Repositorio de projetos",
+    icon: <DiGithubBadge size={26} />,
+    link: "https://github.com/Wanhenri",
+  },  
+  {
+    id: 2,
+    name: "LogoFacebook",
+    description: "Repositorio de projetos",
+    icon: <FaFacebook size={26} />,
+    link: "https://www.facebook.com/profile.php?id=100028393600095"
+  },
+  {
+    id: 3,
+    name: "LogoInstagram",
+    icon: <FaInstagram size={26} />,
+    link: "https://www.instagram.com/wan_henri/"
+  },
+  {
+    id: 4,
+    name: "LogoLinkedin",
+    icon: <FaLinkedin size={26} />,
+    link: "https://www.linkedin.com/in/wandersonhenrique/"
+  }
+]
 
 function Welcome() {
   return (
@@ -89,6 +120,12 @@ function Welcome() {
           <br></br>
           SANTOS, Tiago Henrique dos; SANTOS, Wanderson Henrique dos. Anteprojeto de uma talha elétrica de 8 toneladas. 2013. <br></br>
           Monografia (Graduação) - Universidade de Taubaté, Departamento de Engenharia Mecânica e Elétrica, Taubaté, 2013., Taubaté.
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          CONTATO:
+
         </Text>
         
     </Wrapper>

@@ -9,6 +9,18 @@ def Product_function(product, code, price):
     db.session.add(product)
     db.session.commit()
 
+def get_user(self):
+    product = Product.query.all()
+    results = [ 
+        {
+            "id":products.id,
+            "name":products.name,
+            "code":products.code,
+            "price":products.price
+        } for products in product]
+     
+    return {"count": len(results), "product": results}
+
 
 def delete_user(id):
     product = db.session.query(Product).filter_by(id=id).first()
@@ -27,10 +39,8 @@ def update_user(id, name, code, price):
 
 class Product_item(Resource):
     def get(self):
-        return {
-            'status': 200,
-            'response': "Funciona Product_item"
-        }
+        get_report = get_user(self)
+        return get_report
 
     def post(self):
         json_data = request.get_json()

@@ -10,6 +10,19 @@ def Vendor_function(name, cnpj, city):
     db.session.commit()
 
 
+def get_user(self):
+    vendor = Vendor.query.all()
+    results = [ 
+        {
+            "id":vendor_s.id,
+            "name":vendor_s.name,
+            "cnpj":vendor_s.cnpj,
+            "city":vendor_s.city
+        } for vendor_s in product]
+
+    return {"count": len(results), "vendor": results}
+
+
 def delete_user(id):
     vendor = db.session.query(Vendor).filter_by(id=id).first()
     db.session.delete(vendor)
@@ -28,10 +41,8 @@ def update_user(id, name, cnpj, city):
 
 class Vendor_item(Resource):
     def get(self):
-        return {
-            'status': 200,
-            'response': "Funciona Vendor_item"
-        }
+        get_report = get_user(self)
+        return get_report
 
     def post(self):
         json_data = request.get_json()
