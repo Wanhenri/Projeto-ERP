@@ -6,7 +6,7 @@ import { Wrapper } from "./styles";
 
 
 export default function Data () {
-    const [product, setProduct] = React.useState([]);
+    const [posts, setPosts] = React.useState([]);
     useEffect(() => {
       fetch(`${process.env.REACT_APP_API_URL}/product_item`, {
         method: "GET",
@@ -16,21 +16,23 @@ export default function Data () {
       })
         .then((response) => response.json())
         .then(data => {
-          setProduct(data)
+          console.log(data.count)
+          console.log(data)
+          setPosts(data)
         })
         .catch((error) => console.log(error));
   
     }, []);
   
     useEffect(() => {
-      console.log(product)
-    },[product])
+      console.log(posts)
+    },[posts])
 
     return (    
         <Wrapper >
-          <h1>TESTE</h1>
-          {product.map(w => (
-            <h1>{w.name}</h1>
+          <h1>TESTE{posts.count&&posts.count}</h1>
+          {posts.product&&posts.product.map(w => (
+            <h1>{w.id}</h1>
            ))}
           <SimpleTable name="Product" code="Code" price="Price" button="Add Product" path="/product"/>
           <SimpleTable name="Vendor"  code="CNPJ" price="City " button="Add Vendor" path="/vendor"/>

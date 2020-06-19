@@ -20,6 +20,9 @@ const Base = createGlobalStyle`
         font-family:inherit;
         font-size: inherit;
     }
+    ul {
+        list-style-type: none;
+    }
 `;
 
 

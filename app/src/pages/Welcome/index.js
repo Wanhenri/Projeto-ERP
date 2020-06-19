@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Title from '../../object/Title';
 import { Text } from '../../object/Text';
 
-import { DiGithubBadge } from "react-icons/di";
-import { FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
+
+import { FaFacebook, FaInstagram, FaLinkedin, FaGithub} from 'react-icons/fa'
 
 
 export const Wrapper = styled.section`
@@ -40,12 +40,22 @@ export const ContainerPhoto = styled.section`
   flex-flow: row wrap;
 `;
 
+export const Image = styled.img`
+  height: 25px;
+  max-width: 25px;
+  object-fit: cover;
+  margin: 5px;
+  text-decoration: none;
+`;
+
+
+
 const redesocial = [
   {
     id: 1,
     name: "GitHub",
     description: "Repositorio de projetos",
-    icon: <DiGithubBadge size={26} />,
+    icon: <FaGithub size={26} />,
     link: "https://github.com/Wanhenri",
   },  
   {
@@ -125,6 +135,11 @@ function Welcome() {
           <br></br>
           <br></br>
           CONTATO:
+          {redesocial.map((icones) => (
+          <a href={icones.link} target="_blank" rel="noopener noreferrer">
+              <Image key={icones.name} />{icones.icon}
+          </a>
+          ))}
 
         </Text>
         
