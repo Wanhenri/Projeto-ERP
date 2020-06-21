@@ -37,6 +37,8 @@ const useStyles = makeStyles({
 export default function SimpleTable(props) {
   const classes = useStyles();
 
+  const Prod = props.product;
+
   return (
     <Wrapper>
         <Link to={props.path}>
@@ -53,14 +55,15 @@ export default function SimpleTable(props) {
               </TableRow>
             </TableHead>
             <TableBody>
-            {props.product.map((row) => (
+            {Prod.map((row) => (
                 <TableRow key={row.name}>
                   <TableCell align="left">{row.id}</TableCell>
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
                   <TableCell align="left">{row.code}</TableCell>
-                  <TableCell align="left">{row.code2}</TableCell>
+                  <TableCell align="left">{row.price}</TableCell>
+                  <Button style={{marginBottom: 3, backgroundColor: "var(--color-first)" }}>DELETE</Button>
                 </TableRow>
               ))}
             </TableBody>
