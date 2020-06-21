@@ -83,11 +83,11 @@ $ python server.py
 
 ## Routes
 
-### ``` GET /api/routes/product ```
+### ``` GET /api/routes/product_item ```
 
 Returns all file
 
-### ``` POST /api/routes/product ```
+### ``` POST /api/routes/product_item ```
 
 Parameters:
 ```
@@ -97,7 +97,7 @@ Parameters:
  "price": "Number"
 }
 ```
-### ``` DELETE /api/routes/product ```
+### ``` DELETE /api/routes/product_item ```
 
 Parameters:
 ```
@@ -105,7 +105,7 @@ Parameters:
  "id": "Number"
 }
 ```
-### ``` PUT /api/routes/product ```
+### ``` PUT /api/routes/product_item ```
 
 Parameters:
 ```
@@ -117,11 +117,11 @@ Parameters:
 }
 ```
 
-### ``` GET /api/routes/vendor ```
+### ``` GET /api/routes/vendor_item ```
 
 Returns all file
 
-### ``` POST /api/routes/vendor ```
+### ``` POST /api/routes/vendor_item ```
 
 Parameters:
 ```
@@ -131,7 +131,7 @@ Parameters:
  "city": "String"
 }
 ```
-### ``` DELETE /api/routes/vendor ```
+### ``` DELETE /api/routes/vendor_item ```
 
 Parameters:
 ```
@@ -139,7 +139,7 @@ Parameters:
  "id": "12"
 }
 ```
-### ``` PUT /api/routes/vendor ```
+### ``` PUT /api/routes/vendor_item ```
 Parameters:
 ```
 {
