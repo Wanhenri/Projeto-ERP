@@ -18,7 +18,7 @@ def get_user(self):
             "name":vendor_s.name,
             "cnpj":vendor_s.cnpj,
             "city":vendor_s.city
-        } for vendor_s in product]
+        } for vendor_s in vendor]
 
     return {"count": len(results), "vendor": results}
 

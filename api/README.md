@@ -92,7 +92,7 @@ Returns a status warning 200
 Parameters:
 ```
 {
- "product": "String or null",
+ "name": "String or null",
  "code": "Number",
  "price": "Number"
 }
