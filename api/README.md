@@ -119,7 +119,7 @@ Parameters:
 
 ### ``` GET /api/routes/vendor ```
 
-Returns a status warning 200
+Returns all file
 
 ### ``` POST /api/routes/vendor ```
 
