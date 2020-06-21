@@ -33,29 +33,6 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, code, code2) {
-  return { name, code, code2 };
-}
-
-const rows = [
-  createData('teste_1', 159, 6.0),
-  createData('teste_2', 237, 6.0),
-  createData('teste_3', 262, 6.0),
-  createData('teste_4', 305, 6.0),
-  createData('teste_5', 356, 16.0),
-];
-
-const info = [
-  {
-    id: 1, 
-    name: "Add Product",
-    path: "/product"
-  },  {
-    id: 2, 
-    name: "Add Vendor",
-    path: "/vendor"
-  }
-]
 
 export default function SimpleTable(props) {
   const classes = useStyles();
@@ -69,14 +46,16 @@ export default function SimpleTable(props) {
           <Table className={classes.table} size="small" aria-label="a dense table">
             <TableHead>
               <TableRow>
+                <TableCell>{props.id}</TableCell>
                 <TableCell>{props.name}</TableCell>
                 <TableCell align="left">{props.code}</TableCell>
                 <TableCell align="left">{props.price}</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+            {props.product.map((row) => (
                 <TableRow key={row.name}>
+                  <TableCell align="left">{row.id}</TableCell>
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
