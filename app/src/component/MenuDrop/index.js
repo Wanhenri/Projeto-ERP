@@ -40,22 +40,6 @@ export default function SimpleMenu() {
     }
   ];
 
-  const menudropdown = [
-    {
-      id: 1, 
-      name:"Product", 
-      add:"Add New Product",
-      search:"Seach Product", 
-      delet:"Delete product"
-    },
-    {
-        id: 2,
-        name:"Vendor", 
-        add:"Add New Vendor",
-        search:"Seach Vendor", 
-        delet:"Delete Vendor"
-    }
-  ];
 
   return (
     <div>
