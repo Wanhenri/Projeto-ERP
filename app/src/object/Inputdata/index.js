@@ -14,6 +14,7 @@ const Inputdata = styled.input`
   &::placeholder {
     color: var(--color-second);
     font-weight: bold;
+    opacity: 0.2;
   }
   &:focus,
   &:hover {

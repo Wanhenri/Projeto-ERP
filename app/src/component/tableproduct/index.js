@@ -33,6 +33,10 @@ const useStyles = makeStyles({
   },
 });
 
+function refreshPage(){ 
+  window.location.reload(); 
+}
+
 
 export default function SimpleTable(props) {
   const classes = useStyles();
@@ -44,6 +48,15 @@ export default function SimpleTable(props) {
         <Link to={props.path}>
           <Button style={{marginBottom:20 }}>{props.button}</Button>
         </Link>
+        <Button 
+          style={{
+            marginBottom:20, 
+            marginLeft:3, 
+            backgroundColor: "var(--color-fifth" 
+            }} 
+            onClick={ refreshPage }>
+              RELOAD
+        </Button>
         <TableContainer component={Paper}>
           <Table className={classes.table} size="small" aria-label="a dense table">
             <TableHead>
@@ -63,7 +76,13 @@ export default function SimpleTable(props) {
                   </TableCell>
                   <TableCell align="left">{row.code}</TableCell>
                   <TableCell align="left">{row.price}</TableCell>
-                  <Button style={{marginBottom: 3, backgroundColor: "var(--color-first)" }}>DELETE</Button>
+                  <Button 
+                      style={{marginBottom: 3, backgroundColor: "var(--color-first)" }}
+                      onClick={() => {
+                        refreshPage();
+                        props.onSubmit(row.id)}}                     
+                    >DELETE
+                    </Button>
                 </TableRow>
               ))}
             </TableBody>

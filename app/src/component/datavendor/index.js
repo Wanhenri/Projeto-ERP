@@ -6,12 +6,6 @@ import { Wrapper } from "./styles";
 
 
 export default function DataVendor () {
-  //function fetchData(url) {
-  //  return fetch(url)
-  //            .then(checkStat)
-  //  
-  //}
-//
     //GET
     const [posts, setPosts] = React.useState([]);
     useEffect(() => {
@@ -52,7 +46,7 @@ export default function DataVendor () {
     };
   
     useEffect(() => {
-      DeleteData("0", () => {});
+      DeleteData(" ", () => {});
     }, []);
 
     return (    

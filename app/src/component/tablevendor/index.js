@@ -39,9 +39,6 @@ export default function SimpleTable(props) {
   console.log("vendor")
   console.log(props.vendor)
 
-  const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("");
-
   function refreshPage(){ 
     window.location.reload(); 
 }
@@ -51,7 +48,15 @@ export default function SimpleTable(props) {
         <Link to={props.path}>
           <Button style={{marginBottom:20 }}>{props.button}</Button>
         </Link>
-        <Button style={{marginBottom:20 }} onClick={() => this.refreshPage()}>RELOAD</Button>
+        <Button 
+          style={{
+            marginBottom:20, 
+            marginLeft:3, 
+            backgroundColor: "var(--color-fifth" 
+            }} 
+            onClick={ refreshPage }>
+              RELOAD
+        </Button>
         <TableContainer component={Paper}>
           <Table className={classes.table} size="small" aria-label="a dense table">
             <TableHead>
@@ -73,7 +78,9 @@ export default function SimpleTable(props) {
                   <TableCell align="left">{row.city}</TableCell>
                   <Button 
                       style={{marginBottom: 3, backgroundColor: "var(--color-first)" }}
-                      onClick={() => props.onSubmit(row.id)}                      
+                      onClick={() => {
+                        refreshPage();
+                        props.onSubmit(row.id)} }                    
                     >DELETE
                     </Button>
                 </TableRow>

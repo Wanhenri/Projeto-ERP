@@ -21,11 +21,18 @@ export const ContainerColumn = styled.section`
   flex-direction: column;
 `;
 
+export const Label = styled.label`
+  margin-left: 47px
+`;
+
+
 export const Form = styled.form``;
 
-const FormLeadVendor = props => {
+const FormLeadVendor = (props) => {
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("");
+  const [name, setName] = useState("");
+  const [cnpj, setCnpj] = useState("");
+  const [city, setCity] = useState("");
 
   return (
     <Card style={{ maxWidth: 470, marginTop: 60 }}>
@@ -34,21 +41,37 @@ const FormLeadVendor = props => {
           <Wrapper>
               <Container>
                   <ContainerColumn>
+                      <Label>Full Name</Label>
                       <InputData  
                         style={{marginLeft: 47}}                    
-                        placeholder="Name"
+                        placeholder="Full Name"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
                       />
+                      <Label>CNPJ</Label>
                       <InputData  
                         style={{marginTop: 3, marginLeft: 47}}                    
-                        placeholder="CNPJ"
+                        placeholder="00.000.000/0000-00"
+                        value={cnpj}
+                        onChange={e => setCnpj(e.target.value)}
                       />
+                      <Label>City</Label>
                       <InputData
                         style={{marginTop: 3, marginLeft: 47}}
                         placeholder="City"
+                        value={city}
+                        onChange={e => setCity(e.target.value)}
                       />
                   </ContainerColumn>
                   <Btn
                     style={{marginTop: 3, marginLeft: 47}}
+                    onClick={event => {
+                      event.preventDefault();
+                      setLoading(true);
+                      props.onSubmit(name,cnpj,city, () => {
+                        setLoading(false);
+                      });
+                    }}
                   >
                     {loading ? "Adding..." : "Add Vendor"}
                   </Btn>
