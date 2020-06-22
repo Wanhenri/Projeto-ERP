@@ -30,6 +30,30 @@ export default function DataVendor () {
   
     }, []);
 
+    //DELETE
+    const [deletes, setdeletes] = React.useState([]);
+    const DeleteData = async (id) => {
+      await fetch(`${process.env.REACT_APP_API_URL}/vendor_item`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          id
+        })
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("DELETE")
+          console.log(data)
+          setdeletes(data);
+        })
+        .catch((error) => console.log(error));
+    };
+  
+    useEffect(() => {
+      DeleteData("0", () => {});
+    }, []);
 
     return (    
         <Wrapper >
@@ -41,7 +65,8 @@ export default function DataVendor () {
               cnpj="cnpj" 
               city="city" 
               button="Add Vendor" 
-              path="/vendor"/> 
+              path="/vendor"
+              onSubmit={DeleteData} /> 
           )} 
         </Wrapper>    
     );

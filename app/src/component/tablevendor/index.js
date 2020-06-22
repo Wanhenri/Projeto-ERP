@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -39,11 +39,19 @@ export default function SimpleTable(props) {
   console.log("vendor")
   console.log(props.vendor)
 
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+
+  function refreshPage(){ 
+    window.location.reload(); 
+}
+
   return (
     <Wrapper>
         <Link to={props.path}>
           <Button style={{marginBottom:20 }}>{props.button}</Button>
         </Link>
+        <Button style={{marginBottom:20 }} onClick={() => this.refreshPage()}>RELOAD</Button>
         <TableContainer component={Paper}>
           <Table className={classes.table} size="small" aria-label="a dense table">
             <TableHead>
@@ -63,7 +71,11 @@ export default function SimpleTable(props) {
                   </TableCell>
                   <TableCell align="left">{row.cnpj}</TableCell>
                   <TableCell align="left">{row.city}</TableCell>
-                  <Button style={{marginBottom: 3, backgroundColor: "var(--color-first)" }}>DELETE</Button>
+                  <Button 
+                      style={{marginBottom: 3, backgroundColor: "var(--color-first)" }}
+                      onClick={() => props.onSubmit(row.id)}                      
+                    >DELETE
+                    </Button>
                 </TableRow>
               ))}
             </TableBody>
