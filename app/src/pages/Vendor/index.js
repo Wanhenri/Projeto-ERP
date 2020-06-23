@@ -32,9 +32,9 @@ function Vendor() {
       .catch((error) => console.log(error));
 };
 
-useEffect(() => {
-  addVendor("Caixa","123123123","123123", () => {});
-}, []);
+//useEffect(() => {
+//  addVendor("Caixa","123123123","123123", () => {});
+//}, []);
 
   return (
     <Wrapper>

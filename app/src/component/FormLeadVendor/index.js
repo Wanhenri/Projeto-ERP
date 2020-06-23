@@ -34,6 +34,10 @@ const FormLeadVendor = (props) => {
   const [cnpj, setCnpj] = useState("");
   const [city, setCity] = useState("");
 
+  function refreshPage(){ 
+    window.location.reload(); 
+}
+
   return (
     <Card style={{ maxWidth: 470, marginTop: 60 }}>
       <Strong>VENDOR</Strong>
@@ -71,6 +75,7 @@ const FormLeadVendor = (props) => {
                       props.onSubmit(name,cnpj,city, () => {
                         setLoading(false);
                       });
+                    refreshPage();
                     }}
                   >
                     {loading ? "Adding..." : "Add Vendor"}

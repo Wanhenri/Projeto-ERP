@@ -26,12 +26,23 @@ export const ContainerRow = styled.section`
   flex-direction: row;
 `;
 
+export const Label = styled.label`
+  margin-left: 47px
+`;
+
 
 export const Form = styled.form``;
 
 const FormLeadProduct = props => {
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("");
+  const [name, setName] = useState("");
+  const [code, setCode] = useState("");
+  const [price, setPrice] = useState("");
+
+  function refreshPage(){ 
+    window.location.reload(); 
+}
+
 
   return (
     <Card style={{ maxWidth: 470, marginTop: 60 }}>
@@ -40,21 +51,38 @@ const FormLeadProduct = props => {
           <Wrapper>
               <Container>
                   <ContainerColumn>
+                      <Label>Product</Label>
                       <InputData  
                         style={{marginLeft: 47}}                    
                         placeholder="Name"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
                       />
+                      <Label>Code</Label>
                       <InputData  
                         style={{marginTop: 3, marginLeft: 47}}                    
                         placeholder="Code"
+                        value={code}
+                        onChange={e => setCode(e.target.value)}
                       />
+                      <Label>Price</Label>
                       <InputData
                         style={{marginTop: 3, marginLeft: 47}}
                         placeholder="Price"
+                        value={price}
+                        onChange={e => setPrice(e.target.value)}
                       />
                   </ContainerColumn>
                   <Btn
                     style={{marginTop: 3, marginLeft: 47}}
+                    onClick={event => {
+                      event.preventDefault();
+                      setLoading(true);
+                      props.onSubmit(name,code,price, () => {
+                        setLoading(false);
+                      });
+                    refreshPage();
+                    }}
                   >
                     {loading ? "Adding..." : "Add Product"}
                   </Btn>
