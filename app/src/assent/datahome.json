@@ -5,43 +5,210 @@
         "dateblog":"Julho 15, 2020",
         "coment":"Comentários",
         "title":"Desenvolvendo ambientes",
-        "subtitle":"teste",
+        "subtitle":"ambiente Python",
         "text":[ 
-        "Realizando um teste simples",
-        "com a união de frases diversas", 
-        "para a concatenação das mesmas", 
-        "fim"
+        "Tem a finalidade de criar ambiente a fim de facilitar",
+        "a vida do desenvolvedor. Funcionando similar ao anaconda", 
+        " ou virtualenv.",
+        "Tendo seu funcionamento similar ao NPM, para instalação",
+        "de pacotes web."
         ]
 
 
     },
     {
         "id":2,
-        "titleCard":"flask_sqlalchemy",
-        "dateblog":"Julho 16, 2020",
+        "titleCard":"Pipfile",
+        "dateblog":"Julho 15, 2020",
         "coment":"Comentários",
-        "title":"Criação de banco de dados",
-        "subtitle":"teste",
+        "title":"Definição de Pacotes",
+        "subtitle":"Pacotes Python",
         "text":[ 
-            "bora testar",
-            "escrevendo babozeiras", 
-            "teste3", 
-            "fim"
+            "Efetuado a leitura pelo Pipenv, o Pipfile será o local",
+            "onde iremos alocar todos os pacotes necessários para a ", 
+            "elaboração do nosso projeto.", 
+            "Com a sua leitura, será salvo também um arquivo com suas",
+            "dependencias"
             ]
 
     },
     {
         "id":3,
+        "titleCard":"Procfile",
+        "dateblog":"Julho 15, 2020",
+        "coment":"Comentários",
+        "title":"Configuração Heroku",
+        "subtitle":"server Python",
+        "text":[ 
+            "Na plataforma Heroku, é necessário ter esse arquivo bem configura",
+            "para que consiga fazer a conexão com o frontent"
+            ]
+
+    },
+    {
+        "id":4,
+        "titleCard":"flask_sqlalchemy",
+        "dateblog":"Julho 15, 2020",
+        "coment":"Comentários",
+        "title":"Criação de banco de dados",
+        "subtitle":"Biblioteca Python",
+        "text":[ 
+            "Uma biblioteca simples e rápida para criação de banco de dados. Sua documentação é bem dicadica",
+            "e com muito conteúdo para aprendizado nos mecanismos de busca."
+            ]
+
+    },
+    {
+        "id":5,
         "titleCard":"Flask",
+        "dateblog":"Julho 16, 2020",
+        "coment":"Comentários",
+        "title":"Framework web",
+        "subtitle":"Python",
+        "text":[ 
+            "Uma simples framework para construção de aplicações web.",
+            "Nele é possivel desenvolver qualquer tipo de aplicação que desejar.", 
+            "Nativamente, ele possuí algumas limitações, porém pode realizar chamadas que ele fazer a leitura", 
+            "e envia para o frontend"
+            ]
+    },
+    {
+        "id":6,
+        "titleCard":"styled-components",
+        "dateblog":"Julho 16, 2020",
+        "coment":"Comentários",
+        "title":"Estilos de componentes",
+        "subtitle":"Biblioteca JavaScript",
+        "text":[ 
+            "Uma excelente biblioteca para criação de componentes em CSS.",
+            "Escrito em Javascript porém utilizando as sintaxes do CSS."
+            ]
+    },
+    {
+        "id":7,
+        "titleCard":"flask_restful",
+        "dateblog":"Julho 16, 2020",
+        "coment":"Comentários",
+        "title":"Criação de Rest APIS",
+        "subtitle":"Biblioteca Python",
+        "text":[ 
+            "É uma extensão do Flaks para criação de Rest Apis."
+            ]
+    },
+    {
+        "id":8,
+        "titleCard":"flask_restful - Resource",
+        "dateblog":"Julho 16, 2020",
+        "coment":"Comentários",
+        "title":"Criação de Rest APIS",
+        "subtitle":"Biblioteca Python",
+        "text":[ 
+            "O Resource é passado dentro de uma classe onde fará as requisições dos métodos."
+            ]
+    },
+    {
+        "id":9,
+        "titleCard":"flask - request",
         "dateblog":"Julho 17, 2020",
         "coment":"Comentários",
         "title":"Criação de um backend",
-        "subtitle":"teste",
+        "subtitle":"Biblioteca Python",
         "text":[ 
-            "Lorem Ipsum is simply dummy text of the printing and typesetting",
-            "industry. Lorem Ipsum has been the industry's standard dummy text", 
-            "since the 1500s, when an unknown printer took a galley of type and", 
-            "scrambled it to make a type specimen book. It has survived not"
+            "Na nossa aplicação, ele teve a finalidade de receber os parametros json e passar",
+            "para a função desejada."
+            ]
+    },
+    {
+        "id":10,
+        "titleCard":"flask_cors - CORS",
+        "dateblog":"Julho 18, 2020",
+        "coment":"Comentários",
+        "title":"Criação de um backend",
+        "subtitle":"Biblioteca Python",
+        "text":[ 
+            "Tem a finalidade de habilitar o suporte ao CORS em todas as rotas."
+            ]
+    },
+    {
+        "id":11,
+        "titleCard":"useEffect",
+        "dateblog":"Julho 18, 2020",
+        "coment":"Comentários",
+        "title":"Hooks",
+        "subtitle":"Biblioteca React",
+        "text":[ 
+            "Permite que você use o state e outros recursos do React sem escrever uma classe."
+            ]
+    },
+    {
+        "id":12,
+        "titleCard":"fetch",
+        "dateblog":"Julho 18, 2020",
+        "coment":"Comentários",
+        "title":"Requisição e Resposta",
+        "subtitle":"Nativo Javascript",
+        "text":[ 
+            "Uma ferramenta utilizada no javascript para acessar e minupular partes do pipeline HTTP,",
+            "tais como as requisições e repostas de um caminho fornecido para o fetch."
+            ]
+    },
+    {
+        "id":13,
+        "titleCard":"async/await",
+        "dateblog":"Julho 19, 2020",
+        "coment":"Comentários",
+        "title":"Funções assíncronas",
+        "subtitle":"Nativo Javascript",
+        "text":[ 
+            "Uma função assíncrona que retona um objeto."
+            ]
+    },
+    {
+        "id":14,
+        "titleCard":"react-router-dom",
+        "dateblog":"Julho 20, 2020",
+        "coment":"Comentários",
+        "title":"Criação de rotas",
+        "subtitle":"Biblioteca",
+        "text":[ 
+            "com os pacotes Link, BrowserRouter, Route, Switch, somos capazes de criar paginação ",
+            "da nossa aplicação através de rotas e links."
+            ]
+    },
+    {
+        "id":15,
+        "titleCard":"@material-ui",
+        "dateblog":"Julho 23, 2020",
+        "coment":"Comentários",
+        "title":"Estilização",
+        "subtitle":"Biblioteca",
+        "text":[ 
+            "Esta bibliteca possuí componentes pré definidos para a estilização de uma pagina."
+            ]
+    },
+    {
+        "id":16,
+        "titleCard":"map()",
+        "dateblog":"Julho 23, 2020",
+        "coment":"Comentários",
+        "title":"Criação de um backend",
+        "subtitle":"Nativo Javascript",
+        "text":[ 
+            "O método map() invoca a função callback passada por argumento para cada elemento do ",
+            "Array e devolve um novo Array como resultado."
+            ]
+    },
+    {
+        "id":17,
+        "titleCard":"react-icons",
+        "dateblog":"Julho 23, 2020",
+        "coment":"Comentários",
+        "title":"Icones",
+        "subtitle":"Biblioteca",
+        "text":[ 
+            "Biblioteca com diversos icones para a aplicação."
             ]
     }
+
+
 ]
