@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "79200c20981c600469503c1236972c205661f33b11e370bd559bf46560c7d3ef"
+            "sha256": "ab0c9d4391d1736e8b1159be79490108998a65090d694dd1908817cef1b0e405"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -25,10 +25,10 @@
         },
         "certifi": {
             "hashes": [
-                "sha256:5ad7e9a056d25ffa5082862e36f119f7f7cec6457fa07ee2f8c339814b80c9b1",
-                "sha256:9cd41137dc19af6a5e03b630eefe7d1f458d964d406342dd3edf625839b944cc"
+                "sha256:5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3",
+                "sha256:8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41"
             ],
-            "version": "==2020.4.5.2"
+            "version": "==2020.6.20"
         },
         "chardet": {
             "hashes": [
@@ -83,6 +83,13 @@
             "index": "pypi",
             "version": "==2.1"
         },
+        "flask-swagger-ui": {
+            "hashes": [
+                "sha256:3282c770764c8053360f33b2fc120e1d169ecca2138537d0e6e1135b1f9d4ff2"
+            ],
+            "index": "pypi",
+            "version": "==3.20.9"
+        },
         "gunicorn": {
             "hashes": [
                 "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626",
@@ -100,11 +107,11 @@
         },
         "importlib-metadata": {
             "hashes": [
-                "sha256:0505dd08068cfec00f53a74a0ad927676d7757da81b7436a6eefe4c7cf75c545",
-                "sha256:15ec6c0fd909e893e3a08b3a7c76ecb149122fb14b7efe1199ddd4c7c57ea958"
+                "sha256:90bb658cdbbf6d1735b6341ce708fc7024a3e14e99ffdc5783edea9f9b077f83",
+                "sha256:dc15b2969b4ce36305c51eebe62d418ac7791e9a157911d58bfb1f9ccd8e2070"
             ],
             "markers": "python_version < '3.8'",
-            "version": "==1.6.1"
+            "version": "==1.7.0"
         },
         "itsdangerous": {
             "hashes": [
@@ -210,10 +217,10 @@
         },
         "urllib3": {
             "hashes": [
-                "sha256:3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527",
-                "sha256:88206b0eb87e6d677d424843ac5209e3fb9d0190d0ee169599165ec25e9d9115"
+                "sha256:91056c15fa70756691db97756772bb1eb9678fa585d9184f24534b100dc60f4a",
+                "sha256:e7983572181f5e1522d9c98453462384ee92a0be7fac5f1413a1e35c56cc0461"
             ],
-            "version": "==1.25.9"
+            "version": "==1.25.10"
         },
         "werkzeug": {
             "hashes": [
